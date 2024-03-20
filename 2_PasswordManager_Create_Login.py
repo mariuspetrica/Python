@@ -6,7 +6,7 @@ Manager={}
 def create():
     username=input("Enter username: ")
     password=getpass.getpass("Enter password: ")
-    hashed_pass=hashlib.sha256(password.encode()).hexdigest(
+    hashed_pass=hashlib.sha256(password.encode()).hexdigest()
     Manager[username]=hashed_pass
     print("Succesfully saved!")
 
