@@ -11,7 +11,7 @@ def create():
     print("Succesfully saved!")
 
 def login():
-    username=input("Enter username: ") ##
+    username=input("Enter username: ") 
     password=getpass.getpass("Enter password: ")
     hashed_pass=hashlib.sha256(password.encode()).hexdigest()
     if username in  Manager.keys() and Manager[username] == hashed_pass:
@@ -30,8 +30,7 @@ def main():
         elif choice == "3":
             for username in Manager:
                 hashed_pass=(Manager[username])
-                print (f"Username is {username}")
-                print(f" and password is {hashed_pass}")
+                print (f"Username is {username} and password is {hashed_pass}")
         elif choice=="0":
                 break
         else: print("Invalid choice!")
